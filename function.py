@@ -1,8 +1,10 @@
 import torch
 
 # 计算输入的均值和方差
+from matplotlib import pyplot as plt
+
+
 def calculation_mean_and_std(tensor,epsion=1e-6):
-    # epsion是避免除以0添加的极小量
     # tensor的形状是[batch_size,channel,height,width]
     size = tensor.size()
     assert (len(size) == 4)
